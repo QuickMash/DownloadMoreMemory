@@ -3,7 +3,7 @@
 <h1>Download Memory</h1>
 <h2>Press Download to start</h2>
 <label for="amount">Set ammount in GB: </label>
-<input type="text" class="amount" placeholder="Enter the amount">
+<input type="text" id="amount" class="amount" placeholder="Enter the amount">
 <div id="myProgress">
   <div id="myBar">10%</div>
 </div>
@@ -31,6 +31,7 @@ function move() {
   if (i == 0) {
     i = 1;
     var elem = document.getElementById("myBar");
+    document.getElementById('amount').value = "";
     var width = 10;
     var id = setInterval(frame, 10);
     function frame() {
